@@ -1,13 +1,12 @@
 import UIKit
 
-protocol StoryboardBacked:class {
-    static func newFromStoryboardWithName(name:String?, bundle:NSBundle?) -> Self
+public protocol StoryboardBacked:class {
+    static func newFromStoryboard(withName name:String, bundle:NSBundle) -> Self
 }
 
-extension StoryboardBacked {
-    static func newFromStoryboardWithName(name:String?, bundle:NSBundle?) -> Self {
-        let realName = name ?? NSStringFromClass(self as AnyClass).componentsSeparatedByString(".").last!
-        let storyboard = UIStoryboard(name: realName, bundle: bundle)
+public extension StoryboardBacked {
+    static func newFromStoryboard(withName name: String = String(Self.self), bundle: NSBundle = NSBundle(forClass: Self.self)) -> Self {
+        let storyboard = UIStoryboard(name: name, bundle: bundle)
         let controller = storyboard.instantiateInitialViewController()! as! Self
         return controller
     }

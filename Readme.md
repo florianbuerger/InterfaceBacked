@@ -9,7 +9,7 @@ gist](https://gist.github.com/sandofsky/0a8b5977afb16af1c6083fe97f0ac867)
 I just simplified the code a bit and put it in a Framework. Added a similar
 approach for `UIView` subclasses that rely on a `.nib` file. 
 
-Released under the [MIT license](LICENSE
+Released under the [MIT license](LICENSE)
 
 ## Usage
 

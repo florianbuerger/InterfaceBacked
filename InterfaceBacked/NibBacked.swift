@@ -19,12 +19,11 @@ public protocol NibBackedCell: class {
 
 public extension NibBackedCell {
     static func cellNib(inBundle bundle: NSBundle = NSBundle(forClass: Self.self)) -> UINib {
-        let realName = NSStringFromClass(self as AnyClass).componentsSeparatedByString(".").last!
-        let nib = UINib(nibName: realName, bundle: bundle)
+        let nib = UINib(nibName: String(self), bundle: bundle)
         return nib
     }
     static func identifier() -> String {
-        let realName = NSStringFromClass(self as AnyClass).componentsSeparatedByString(".").last!
+        let realName = String(self)
         return realName
     }
 }

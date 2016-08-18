@@ -12,26 +12,26 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 48
 
-        tableView.registerNib(Cell.cellNib(), forCellReuseIdentifier: Cell.identifier())
+        tableView.register(Cell.cellNib(), forCellReuseIdentifier: Cell.identifier())
         
         let view = SomeView.newFromNib()
         container.addSubview(view)
-        container.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor).active = true
-        container.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-        container.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
-        container.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+        container.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        container.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        container.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        container.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(Cell.identifier()) as? Cell else { fatalError() }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier()) as? Cell else { fatalError() }
         cell.label.text = "(╯°□°）╯︵ ┻━┻"
         return cell
         

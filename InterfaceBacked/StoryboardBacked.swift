@@ -5,7 +5,7 @@ public protocol StoryboardBacked:class {
 }
 
 public extension StoryboardBacked {
-    static func newFromStoryboard(withName name: String = String(Self.self), bundle: Bundle = Bundle(for: Self.self)) -> Self {
+    static func newFromStoryboard(withName name: String = String(describing: Self.self), bundle: Bundle = Bundle(for: Self.self)) -> Self {
         let storyboard = UIStoryboard(name: name, bundle: bundle)
         let controller = storyboard.instantiateInitialViewController()! as! Self
         return controller

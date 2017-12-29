@@ -12,7 +12,7 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 48
 
-        tableView.register(Cell.cellNib(), forCellReuseIdentifier: Cell.identifier())
+        tableView.register(Cell.cellNib(), forCellReuseIdentifier: Cell.identifier)
         
         let view = SomeView.newFromNib()
         container.addSubview(view)
@@ -31,7 +31,7 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier()) as? Cell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier) as? Cell else { fatalError() }
         cell.label.text = "(╯°□°）╯︵ ┻━┻"
         return cell
         

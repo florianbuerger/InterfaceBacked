@@ -12,7 +12,7 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 48
 
-        tableView.register(Cell.cellNib(), forCellReuseIdentifier: Cell.identifier)
+        tableView.register(Cell.cellNib, forCellReuseIdentifier: Cell.identifier)
         
         let view = SomeView.newFromNib()
         container.addSubview(view)

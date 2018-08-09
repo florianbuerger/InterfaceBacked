@@ -12,7 +12,7 @@ public protocol StoryboardBacked:class {
 public extension StoryboardBacked {
     
     static func newFromStoryboard() -> Self {
-        return newFromStoryboard(withName: String(describing: Self.self))
+        return newFromStoryboard(withName: typeName(Self.self))
     }
 
     static func newFromStoryboard(withName name: String) -> Self {

@@ -14,7 +14,7 @@ public protocol NibBacked: class {
 public extension NibBacked {
     
     static func newFromNib() -> Self {
-        return newFromNib(withName: String(describing: Self.self), bundle: Bundle(for: Self.self))
+        return newFromNib(withName: typeName(Self.self), bundle: Bundle(for: Self.self))
     }
     
     static func newFromNib(withName name:String) -> Self {
@@ -44,16 +44,16 @@ public protocol NibBackedCell: class {
 public extension NibBackedCell {
     
     static var cellNib: UINib {
-        let nib = UINib(nibName: String(describing: self), bundle: Bundle(for: Self.self))
+        let nib = UINib(nibName: typeName(self), bundle: Bundle(for: Self.self))
         return nib
     }
 
     static func cellNib(inBundle bundle: Bundle = Bundle(for: Self.self)) -> UINib {
-        let nib = UINib(nibName: String(describing: self), bundle: bundle)
+        let nib = UINib(nibName: typeName(self), bundle: bundle)
         return nib
     }
 
     static var identifier: String {
-        return String(describing: self)
+        return typeName(self)
     }
 }

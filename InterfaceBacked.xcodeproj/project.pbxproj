@@ -23,6 +23,7 @@
 		1711A9701D6566360029A8C0 /* InterfaceBacked.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1711A9331D655F100029A8C0 /* InterfaceBacked.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1711A9751D6567240029A8C0 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1711A9741D6567240029A8C0 /* SomeView.swift */; };
 		1711A9771D65672A0029A8C0 /* SomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1711A9761D65672A0029A8C0 /* SomeView.xib */; };
+		5053CA00211C997400F927DD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C9FF211C997400F927DD /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		1711A96C1D6565A40029A8C0 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		1711A9741D6567240029A8C0 /* SomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 		1711A9761D65672A0029A8C0 /* SomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SomeView.xib; sourceTree = "<group>"; };
+		5053C9FF211C997400F927DD /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = ../../../Desktop/Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				1711A94D1D655F1A0029A8C0 /* NibBacked.swift */,
 				1711A94E1D655F1A0029A8C0 /* StoryboardBacked.swift */,
+				5053C9FF211C997400F927DD /* Utility.swift */,
 				1711A9361D655F100029A8C0 /* InterfaceBacked.h */,
 				1711A9381D655F100029A8C0 /* Info.plist */,
 			);
@@ -311,6 +314,7 @@
 			files = (
 				1711A9501D655F1A0029A8C0 /* StoryboardBacked.swift in Sources */,
 				1711A94F1D655F1A0029A8C0 /* NibBacked.swift in Sources */,
+				5053CA00211C997400F927DD /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

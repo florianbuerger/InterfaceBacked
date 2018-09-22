@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'InterfaceBacked'
-  s.version = '2.0.1'
+  s.version = '2.1.0'
   s.summary = 'Simplify using `.storyboards` like `.xib` files'
   s.description = <<-DESC
   Easily create UIViewController from a single storyboard with the same name with handling the error cases, different bundles or optionals.
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/florianbuerger'
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
+	s.swift_version = '4.2'
   s.source = {
     git: 'https://github.com/florianbuerger/interfacebacked.git',
     tag: s.version.to_s

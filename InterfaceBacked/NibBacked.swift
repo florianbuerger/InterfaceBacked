@@ -25,7 +25,7 @@ public extension NibBacked {
         return newFromNib(withName: name, bundle: bundle, owner: nil, options: nil)
     }
     
-    static func newFromNib(withName name: String, bundle: Bundle, owner: AnyObject?, options: [NSObject : AnyObject]?) -> Self {
+    static func newFromNib(withName name: String, bundle: Bundle, owner: AnyObject?, options: [UINib.OptionsKey: AnyObject]?) -> Self {
         let nib = UINib(nibName: name, bundle: bundle)
         let view = nib.instantiate(withOwner: owner, options: options).first as! Self
         return view

@@ -9,7 +9,7 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 48
 
         tableView.register(Cell.cellNib, forCellReuseIdentifier: Cell.identifier)

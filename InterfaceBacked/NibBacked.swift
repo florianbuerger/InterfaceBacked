@@ -8,7 +8,7 @@ public protocol NibBacked: class {
     
     static func newFromNib(withName name:String, bundle:Bundle) -> Self
     
-    static func newFromNib(withName name:String, bundle:Bundle, owner: AnyObject?, options: [NSObject : AnyObject]?) -> Self
+    static func newFromNib(withName name:String, bundle:Bundle, owner: AnyObject?, options: [UINib.OptionsKey: AnyObject]?) -> Self
 }
 
 public extension NibBacked {

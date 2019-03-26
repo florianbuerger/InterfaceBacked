@@ -15,6 +15,7 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
         tableView.register(Cell.cellNib, forCellReuseIdentifier: Cell.identifier)
         
         let view = SomeView.newFromNib()
+        view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         container.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         container.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

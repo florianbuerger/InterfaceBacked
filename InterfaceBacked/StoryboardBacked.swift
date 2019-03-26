@@ -1,13 +1,6 @@
 import UIKit
 
-public protocol StoryboardBacked:class {
-    
-    static func newFromStoryboard() -> Self
-    
-    static func newFromStoryboard(withName name:String) -> Self
-    
-    static func newFromStoryboard(withName name:String, bundle:Bundle) -> Self
-}
+public protocol StoryboardBacked:class {}
 
 public extension StoryboardBacked {
     

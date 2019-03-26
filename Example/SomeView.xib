@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,17 +16,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-2a-chp">
-                    <rect key="frame" x="8" y="8" width="481" height="30"/>
+                    <rect key="frame" x="8" y="8" width="481" height="34"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8n-oQ-xGY">
-                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="34"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pn1-qd-lEz">
-                            <rect key="frame" x="52" y="0.0" width="302" height="31"/>
+                            <rect key="frame" x="52" y="0.0" width="302" height="35"/>
                         </slider>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aR5-d8-D36">
-                            <rect key="frame" x="360" y="0.0" width="121" height="31"/>
+                            <rect key="frame" x="360" y="0.0" width="121" height="35"/>
                             <segments>
                                 <segment title="First"/>
                                 <segment title="Second"/>
@@ -31,9 +35,10 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qDo-2a-chp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Gkg-Ny-Spn"/>
+                <constraint firstAttribute="bottom" secondItem="qDo-2a-chp" secondAttribute="bottom" constant="8" id="I2s-mh-cLr"/>
                 <constraint firstItem="qDo-2a-chp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="SBV-BS-AtC"/>
                 <constraint firstAttribute="trailing" secondItem="qDo-2a-chp" secondAttribute="trailing" constant="8" id="qcm-Fd-yoh"/>
             </constraints>

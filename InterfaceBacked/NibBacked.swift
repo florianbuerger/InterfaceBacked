@@ -1,15 +1,6 @@
 import UIKit
 
-public protocol NibBacked: class {
-    
-    static func newFromNib() -> Self
-    
-    static func newFromNib(withName name:String) -> Self
-    
-    static func newFromNib(withName name:String, bundle:Bundle) -> Self
-    
-    static func newFromNib(withName name:String, bundle:Bundle, owner: AnyObject?, options: [UINib.OptionsKey: AnyObject]?) -> Self
-}
+public protocol NibBacked: class {}
 
 public extension NibBacked {
     
@@ -32,14 +23,7 @@ public extension NibBacked {
     }
 }
 
-public protocol NibBackedCell: class {
-    
-    static var cellNib: UINib { get }
-    
-    static func cellNib(inBundle bundle: Bundle) -> UINib
-    
-    static var identifier: String { get }
-}
+public protocol NibBackedCell: class {}
 
 public extension NibBackedCell {
     

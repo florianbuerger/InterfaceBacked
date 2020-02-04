@@ -18,3 +18,16 @@ public extension StoryboardBacked {
         return controller
     }
 }
+
+@available(iOS 13.0, *)
+public extension StoryboardBacked where Self: UIViewController {
+    
+    static func newFromStoryboard(builder: @escaping (NSCoder) -> Self) -> Self {
+        let storyboard = UIStoryboard(name: String(describing: Self.self), bundle: Bundle(for: Self.self))
+        guard let viewController = storyboard.instantiateInitialViewController(creator: builder) else {
+            preconditionFailure("Unable to create view controller from storyboard \(storyboard)")
+        }
+        
+        return viewController
+    }
+}

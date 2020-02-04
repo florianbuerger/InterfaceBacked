@@ -5,6 +5,13 @@ final class ViewController: UIViewController, UITableViewDataSource, StoryboardB
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var container: UIView!
+    
+    private var someProperty = false
+    
+    init(coder: NSCoder, someProperty: Bool) {
+        self.someProperty = someProperty
+        super.init(coder: coder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.author = { 'Florian Bürger' => 'florian@florianbuerger.com' }
   s.social_media_url = 'https://twitter.com/florianbuerger'
   s.ios.deployment_target = '12.0'
-  s.tvos.deployment_target = '12.0'
   s.swift_version = '5'
   s.source = {
     git: 'https://github.com/florianbuerger/interfacebacked.git',

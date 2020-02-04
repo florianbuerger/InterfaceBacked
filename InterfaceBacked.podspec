@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'InterfaceBacked'
-  s.version = '2.2'
+  s.version = '2.3'
   s.summary = 'Simplify using `.storyboards` like `.xib` files'
   s.description = <<-DESC
   Easily create UIViewController from a single storyboard with the same name with handling the error cases, different bundles or optionals.
